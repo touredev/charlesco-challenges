@@ -3,10 +3,10 @@ require_relative '../level1/utils'
 module Utils
   class Rental
 
-     # Compute the duration price based on the new rules
-     def duration_price
+    # Compute the duration price based on the new rules
+    def duration_price
       price_per_day = fetch_car.price_per_day
-      discounted_price = price_per_day
+      discounted_price = 0
 
       case duration
       when 1
