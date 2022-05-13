@@ -17,7 +17,7 @@ class Level3Test < Minitest::Test
   def test_commissions
     Utils.import_data
     expected_content = JSON.parse(File.read('./data/expected_output.json'))
-    rental = Utils.rentals_list.fetch('1')
+    rental = Utils.rentals_list.fetch(1)
     rental.calculate_commission
     commission = rental.commission
     assert_equal commission.insurance_fee, expected_content['rentals'][0]['commission']['insurance_fee'], "Unexpected insurance fee"

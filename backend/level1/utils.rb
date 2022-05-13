@@ -34,7 +34,7 @@ module Utils
     end
   
     def fetch_car
-      Utils.cars_list[car_id.to_s]
+      Utils.cars_list[car_id]
     end
   
     # Compute the duration of the rental
@@ -70,11 +70,11 @@ module Utils
     @@data = JSON.parse(json_file)
 
     @@data['cars'].each do |car|
-      @@cars_list[car['id'].to_s] = Car.new(car)
+      @@cars_list[car['id']] = Car.new(car)
     end
 
     @@data['rentals'].each do |rental|
-      @@rentals_list[rental['id'].to_s] = Rental.new(rental)
+      @@rentals_list[rental['id']] = Rental.new(rental)
     end
 
   end

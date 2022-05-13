@@ -9,7 +9,7 @@ module Utils
     end
 
     def fetch_rental
-      Utils.rentals_list[rental_id.to_s]
+      Utils.rentals_list[rental_id]
     end
 
     # Compute the amount that belongs to the insurance, to the assistance and to us

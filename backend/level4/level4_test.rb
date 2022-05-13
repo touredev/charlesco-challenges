@@ -3,7 +3,7 @@ require 'json'
 require_relative './utils'
 
 
-class Level3Test < Minitest::Test
+class Level4Test < Minitest::Test
   def test_output
     Utils.import_data
     output_content = Utils.build_output

@@ -35,3 +35,12 @@ You can send your Github project link or zip your directory and send it via emai
 If you do not use Github, don't forget to attach your `.git` folder.
 
 Good luck!
+
+
+## Test
+
+To run test files you have install Minitest gem:
+- `$ gem install bundler`
+- `$ bundle install`
+
+Now move to the each level folder and run the test file.
