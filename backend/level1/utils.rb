@@ -56,6 +56,10 @@ module Utils
     def price
       duration_price + distance_price
     end
+
+    def as_json
+      {'id' => self.id, 'price' => self.price}
+    end
   
   end
 
@@ -95,7 +99,7 @@ module Utils
     output = {'rentals' => []}
 
     self.rentals_list.each do |k_, rental|
-      output['rentals'] << { 'id' => rental.id, 'price' => rental.price }
+      output['rentals'] << rental.as_json
     end
 
     output
